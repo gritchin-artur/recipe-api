@@ -4,7 +4,6 @@ import { recipeComponents } from '../components/recipeComponents.js';
 import { updateRecipesDom } from './updateRecipesDom.js';
 import { sortComponent } from '../components/sortComponent.js';
 import { updateSortDom } from './updateSortDom.js';
-import data from '../data.js';
 import { filterByTags } from './filterByTags.js';
 
 export const submitHandler = async (e) => {
@@ -21,7 +20,6 @@ export const submitHandler = async (e) => {
     try {
         dom.error.innerText = '';
         const recipeData = await getRecipe(inputData);
-        data.meals = recipeData;
         const recipesExists = document.querySelector('.recipes-container');
         const sortExist = document.querySelector('.sort-container');
 
@@ -41,7 +39,6 @@ export const submitHandler = async (e) => {
                 filterByTags(recipeData.meals);
             });
         });
-        console.log(recipeData.meals);
     } catch (error) {
         dom.result.innerHTML = '';
         dom.error.innerText = 'Nothing was found';
