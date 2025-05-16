@@ -1,1 +1,3 @@
-import data from './data.js';
+import { submitEvent } from './events/submitEvent.js';
+
+submitEvent();

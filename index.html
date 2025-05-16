@@ -5,9 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/index.css" />
-        <title>JS starter</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>"
+        />
+        <title>Recipe</title>
     </head>
     <body>
+        <h1>Find recipe</h1>
+        <form id="form">
+            <input type="text" id="input" />
+            <button type="submit">search</button>
+        </form>
+        <div id="result"></div>
+        <p id="error"></p>
         <script type="module" src="./src/init.js"></script>
     </body>
 </html>
